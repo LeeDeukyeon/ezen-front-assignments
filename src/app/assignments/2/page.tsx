@@ -13,11 +13,32 @@ interface Profile {
 }
 
 export default function Assignment2() {
+  const 등장인물A = {
+    imageSrc: "/마석도.png",
+    name: "마석도",
+    age: 45,
+    nationality: "한국",
+    height: 179,
+    weight: 120,
+    job: "직업",
+    famousLines: ["응 아직 솔로야"],
+  };
+
   return (
     <>
       <Header title={"프로필 카드 만들기"} hasBack={true} />
       <div className="w-full h-full flex flex-col overflow-y-auto py-5 px-5 gap-5">
         {/* 이 아래에 코드를 작성해 주세요. */}
+        <ProfileCard
+          imageSrc={등장인물A.imageSrc}
+          name={등장인물A.name}
+          age={등장인물A.age}
+          nationality={등장인물A.nationality}
+          height={등장인물A.height}
+          weight={등장인물A.weight}
+          job={등장인물A.job}
+          famousLines={등장인물A.famousLines}
+        />
       </div>
     </>
   );
